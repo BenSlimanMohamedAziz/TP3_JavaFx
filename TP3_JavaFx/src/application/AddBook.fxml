@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookControlor">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="329.0" minWidth="10.0" prefWidth="173.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.0" minWidth="10.0" prefWidth="185.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="0.0" prefWidth="181.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="0.0" prefWidth="97.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="238.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="238.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="238.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom :" wrappingWidth="108.775390625">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" wrappingWidth="99.775390625" GridPane.rowIndex="1">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse Email :" wrappingWidth="135.775390625" GridPane.rowIndex="2">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Button fx:id="addBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="209.0" text="Ajouter a la table" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+      <Button fx:id="removeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="119.0" text="Supprimer" textAlignment="CENTER" GridPane.rowIndex="5" />
+      <Button fx:id="exportBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#exporter" prefHeight="25.0" prefWidth="100.0" text="Exporter" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="importBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleImportbuttonAction" prefHeight="25.0" prefWidth="93.0" text="Importer" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Button fx:id="quitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="25.0" prefWidth="76.0" text="Quitter" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <TextField fx:id="tfFirstName" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+      <TextField fx:id="tfLastName" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+      <TextField fx:id="tfEmail" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="4">
+        <columns>
+          <TableColumn fx:id="firstNameCol" prefWidth="229.0" text="Prenom" />
+          <TableColumn fx:id="lastNameCol" prefWidth="211.0" text="Nom" />
+            <TableColumn fx:id="emailCol" prefWidth="204.0" text="Email" />
+        </columns>
+      </TableView>
+   </children>
+</GridPane>
